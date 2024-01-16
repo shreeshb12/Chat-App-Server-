@@ -35,4 +35,4 @@ server.listen(process.env.PORT || 3001, () => {
   console.log("SERVER RUNNING");
 });
 
-module.exports = io;
+module.exports = server;

@@ -15,5 +15,10 @@
                 "Access-Control-Allow-Origin":"https://vermillion-pastelito-349ece.netlify.app"
             }
         }
-    ]
+    ],
+    "functions": {
+        "api/index.js": {
+          "runtime": "nodejs18.x"
+        }
+      }
  }
