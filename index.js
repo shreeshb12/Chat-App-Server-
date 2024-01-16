@@ -1,15 +1,15 @@
 const express = require("express");
 const app = express();
-const https = require("https");
+const http = require("https");
 const cors = require("cors");
 const { Server } = require("socket.io");
-app.use(cors());
+app.use(cors({
+  origin:'https://vermillion-pastelito-349ece.netlify.app'
+}));
 
-const server = https.createServer(app);
+const server = http.createServer(app);
 
-const io = new Server(server,{
-  cors:'https://vermillion-pastelito-349ece.netlify.app/'
-});
+const io = new Server(server);
 
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
