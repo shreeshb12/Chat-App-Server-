@@ -7,7 +7,9 @@ app.use(cors());
 
 const server = https.createServer(app);
 
-const io = new Server(server);
+const io = new Server(server,{
+  cors:'https://vermillion-pastelito-349ece.netlify.app/'
+});
 
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
