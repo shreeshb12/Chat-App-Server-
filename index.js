@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-const http = require("https");
+const https = require("https");
 const cors = require("cors");
 const { Server } = require("socket.io");
 app.use(cors());
 
-const server = http.createServer(app,{
+const server = https.createServer(app,{
   cors: {
     origin: "https://vermillion-pastelito-349ece.netlify.app/",
     methods: ["GET", "POST"],
