@@ -7,7 +7,7 @@ app.use(cors());
 
 const server = http.createServer(app,{
   cors: {
-    origin: "https://chat-app-client-xi-five.vercel.app/",
+    origin: "https://vermillion-pastelito-349ece.netlify.app",
     methods: ["GET", "POST"],
 }
 });
